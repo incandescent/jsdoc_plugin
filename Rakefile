@@ -10,6 +10,8 @@ begin
     gem.email = "aaron@incandescentsoftware.com"
     gem.homepage = "http://github.com/incandescent/jsdoc_plugin"
     gem.authors = ["Aaron Hamid"]
+    gem.files = Dir.glob('lib/**/*') + %w(README.rdoc LICENSE VERSION jsdoc_plugin.gemspec)
+    gem.add_dependency "jsdoc", ">=0"
     gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
