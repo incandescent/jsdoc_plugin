@@ -6,7 +6,8 @@ def generate_jsdoc(*args)
   dir = File.expand_path('doc' + File::SEPARATOR + 'jsdoc')
   FileUtils.mkdir_p(dir)
   recursive = '-r'
-  jsdoc = JsDoc.new(dir, recursive, *args)
+  jsdoc_args = [ recursive ] + args
+  JsDoc.new.run(dir, *jsdoc_args)
 end
 
 namespace :doc do
